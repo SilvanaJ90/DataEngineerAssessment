@@ -1,0 +1,51 @@
+Extracción de Datos           Limpieza y Transformación      Almacenamiento de Datos      Visualización y Análisis
+    de Fuentes                      de Datos (ETL)                   (Data Warehouse)           de Datos
+
+        |                                   |                                  |                                |
+        v                                   v                                  v                                v
+
+    +---------+                      +-------------+                     +----------------+             +-------------------+
+    | Archivos|                      | Transformar |                     | Base de Datos  |             | Herramienta de    |
+    |  CSV    |  --+                 |   y Limpiar |                     |   PostgreSQL   |   -----+    | Visualización de  |
+    +---------+    |                 +-------------+                     +----------------+        |    | Datos (Dash,     |
+                   |                       |     |                               |                 |    | Plotly, etc.)     |
+                   |                       v     |                               |                 |    +-------------------+
+                   |                 +-------------+                           |                 |
+                   +---------------->|  Scripts de |                           |                 |
+                                     |  Transform |                           |                 |
+                                     +-------------+                           |                 |
+                                            |                                  |                 |
+                                            v                                  |                 |
+                                     +-------------+                           |                 |
+                                     |    CSV,     |                           |                 |
+                                     |   Pandas,   |                           |                 |
+                                     |   etc.      |                           |                 |
+                                     +-------------+                           |                 |
+                                            |                                  |                 |
+                                            v                                  |                 |
+                                     +-------------+                           |                 |
+                                     |   Datos     |                           |                 |
+                                     |   Limpios   |                           |                 |
+                                     |   y       --+                          |                 |
+                                     |  Transform | |                          |                 |
+                                     +-------------+ |                          |                 |
+                                                    |                          |                 |
+                                                    v                          |                 |
+                                           +-----------------+                 |                 |
+                                           |    Data Mart    |                 |                 |
+                                           |  (Transformado  |                 |                 |
+                                           |   y Filtrado)   |                 |                 |
+                                           +-----------------+                 |                 |
+                                                    |                          |                 |
+                                                    v                          |                 |
+                                             +---------------+                 |                 |
+                                             |  Visualización|                 |                 |
+                                             |   de Datos    |                 |                 |
+                                             |    Interactiva|                 |                 |
+                                             +---------------+                 |                 |
+                                                                                  |                 |
+                                                                                  v                 |
+                                                                             +-----------+           |
+                                                                             |  Reportes | <---------+
+                                                                             |   y Dash  |
+                                                                             +-----------+

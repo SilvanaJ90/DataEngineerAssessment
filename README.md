@@ -22,7 +22,7 @@ Investment commercial managers oversee a large number of clients, and the inform
 
 This diagram shows the architecture of our analytical pipeline:
 
-![This is an image](https://github.com/SilvanaJ90/structure_analysis.png)
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/structure_analysis.png)
 
 ## Postgres storage
 

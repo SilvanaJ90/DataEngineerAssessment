@@ -22,7 +22,7 @@ def clean_data(df):
         if isinstance(x, float) and x.is_integer():
             return str(int(x))
         return str(x)
-    return df.applymap(convert_value)
+    return df.map(convert_value)
 
 # Function to insert data into a table from a CSV file
 def insert_data_from_csv(session, table_name, csv_file_path):

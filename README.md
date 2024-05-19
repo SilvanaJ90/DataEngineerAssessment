@@ -4,7 +4,7 @@
 
 - [General project requirements](https://github.com/SilvanaJ90/DataEngineerAssessment#general-project-requirements)
 - [General functionalities](https://github.com/SilvanaJ90/DataEngineerAssessment#general-functionalities)
-- [Authors](https://github.com/SilvanaJ90/DataEngineerAssessment#authors)
+- [Authors](https://github.com/SilvanaJ90/DataEngineerAssessment?tab=readme-ov-file#author)
 
 
 ## General project requirements
@@ -28,9 +28,7 @@ This diagram shows the architecture of our analytical pipeline:
 
 Postgres database, an O.R.M storage was implemented with sqlalchemy
 
-This project has a console that allows you to create, update, delete, insert data into 
-- [The database using the following commands ](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/setup_postgres_dev.sql)
-
+- [To create the database use the following command ](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/setup_postgres_dev.sql)
 
 
 ## SQL Queries Development: 
@@ -38,21 +36,6 @@ This project has a console that allows you to create, update, delete, insert dat
 - [To insert the CSV data into the database, use the following script](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/connection.py).
 
 ## Technical Conclusions:
-
-
-
-
-
-## How to Start It
-Execution
-- 
-```
-
-```
-- 
-```
-
-```
 
 
 ## Technology Implemented:

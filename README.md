@@ -1,4 +1,4 @@
-# TECHNICAL TEST FOR INVESTMENT ANALYTICS MANAGEMENT
+# Technical Test for Investment Analytics Management
 
 ## Table of Contents
 
@@ -10,71 +10,21 @@
 ## General project requirements
 
 Investment commercial managers oversee a large number of clients, and the information they have about these clients comes from various sources and with unconventional codes, making it difficult for them to extract knowledge from the available information and generate new investment opportunities in a more automated way. Therefore, it is necessary to develop an analytical tool that allows them to visualize at a minimum:
-• The portfolio of each client and what percentage each macro-asset and asset represents in the total portfolio, considering the latest available date.
-• The portfolio by banking sector and what percentage each macro-asset represents, considering the latest available date.
-• The portfolio by risk profile and what percentage each macro-asset represents, considering the latest available date.
-• The month-to-month evolution of the average ABA (Assets Under Management) of the total portfolio. It is desirable to be able to select start and end dates to determine the period to be analyzed.
+- The portfolio of each client and what percentage each macro-asset and asset represents in the total portfolio, considering the latest available date.
+- The portfolio by banking sector and what percentage each macro-asset represents, considering the latest available date.
+- The portfolio by risk profile and what percentage each macro-asset represents, considering the latest available date.
+- The month-to-month evolution of the average ABA (Assets Under Management) of the total portfolio. It is desirable to be able to select start and end dates to determine the period to be analyzed.
 
 
 ## General functionalities
 
-### Design a System or Analytical Pipeline:
+## Design a System or Analytical Pipeline:
 
 This diagram shows the architecture of our analytical pipeline:
 
-from Sources                         (ETL)                          (Data Warehouse)              
+![This is an image](https://github.com/SilvanaJ90/structure_analysis.png)
 
-    |                                   |                                  |                                |
-    v                                   v                                  v                                v
-
-+---------+                      +-------------+                     +----------------+             +-------------------+
-| CSV     |                      | Transform   |                     | Database       |             | Data Visualization|
-| Files   |  --+                 |   and       |                     | PostgreSQL     |   -----+    | Tool (Dash,       |
-+---------+    |                 |   Clean     |                     +----------------+        |    | Plotly, etc.)     |
-               |                 +-------------+                           |                 |    +-------------------+
-               |                       |     |                               |                 |
-               |                       v     |                               |                 |
-               |                 +-------------+                           |                 |
-               +---------------->|  Transform  |                           |                 |
-                                 |  Scripts    |                           |                 |
-                                 +-------------+                           |                 |
-                                        |                                  |                 |
-                                        v                                  |                 |
-                                 +-------------+                           |                 |
-                                 |    CSV,     |                           |                 |
-                                 |   Pandas,   |                           |                 |
-                                 |   etc.      |                           |                 |
-                                 +-------------+                           |                 |
-                                        |                                  |                 |
-                                        v                                  |                 |
-                                 +-------------+                           |                 |
-                                 |   Cleaned   |                           |                 |
-                                 |   and       --+                        |                 |
-                                 | Transformed | |                        |                 |
-                                 +-------------+ |                        |                 |
-                                                |                        |                 |
-                                                v                        |                 |
-                                       +-----------------+               |                 |
-                                       |    Data Mart    |               |                 |
-                                       | (Transformed    |               |                 |
-                                       |   and Filtered) |               |                 |
-                                       +-----------------+               |                 |
-                                                |                        |                 |
-                                                v                        |                 |
-                                         +---------------+               |                 |
-                                         | Interactive   |               |                 |
-                                         | Data          |               |                 |
-                                         | Visualization |               |                 |
-                                         +---------------+               |                 |
-                                                                          |                 |
-                                                                          v                 |
-                                                                     +-----------+           |
-                                                                     |  Reports  | <---------+
-                                                                     | and Dash  |
-                                                                     +-----------+
-
-
-### Postgres storage
+## Postgres storage
 
 Postgres database, an O.R.M storage was implemented with sqlalchemy
 
@@ -83,13 +33,13 @@ This project has a console that allows you to create, update, delete, insert dat
 
 
 
-### SQL Queries Development: 
+## SQL Queries Development: 
 
 - [To insert the CSV data into the database, use the following script](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/connection.py).
 
-### Technical Conclusions:
+## Technical Conclusions:
 
-![This is an image](https://github.com/SilvanaJ90/png)
+
 
 
 
@@ -113,4 +63,3 @@ Execution
 
 - Silvana Jaramillo
  <a href="https://linkedin.com/in/silvana-jaramillo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="silvana-jaramillo" height="30" width="40" /></a>
--

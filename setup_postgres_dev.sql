@@ -59,6 +59,7 @@ BEGIN
     END LOOP;
 END $$;
 
+GRANT ALL PRIVILEGES ON DATABASE fintech TO fintech;
 
 
 -- Alternatively, grant specific permissions --
@@ -66,6 +67,8 @@ GRANT ALL ON SEQUENCE historico_aba_macroactivos_id_seq TO fintech;
 -- Alternativamente, otorga permisos específicos
 GRANT SELECT, UPDATE, USAGE ON SEQUENCE historico_aba_macroactivos_id_seq TO fintech;
 
--- Check permissions --
-\dp historico_aba_macroactivos_id_seq
-
+-- assigning the tables to the database user
+ALTER TABLE cat_perfil_riesgo owner to "fintech";
+ALTER TABLE catalogo_banca owner to "fintech";
+ALTER TABLE catalogo_activos owner to "fintech";
+ALTER TABLE historico_aba_macroactivos owner to "fintech";

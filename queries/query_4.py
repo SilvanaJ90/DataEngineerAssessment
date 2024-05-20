@@ -18,7 +18,7 @@ SELECT
     ingestion_month,
     AVG(aba) AS promedio_aba
 FROM historico_aba_macroactivos
-WHERE (ingestion_year * 100 + ingestion_month) BETWEEN 202311 AND 202412
+WHERE (ingestion_year * 100 + ingestion_month) BETWEEN 202311 AND 202405
 GROUP BY ingestion_year, ingestion_month
 ORDER BY ingestion_year, ingestion_month;
 """

@@ -22,12 +22,12 @@ Investment commercial managers oversee a large number of clients, and the inform
 
 This diagram shows the architecture of our analytical pipeline:
 
-![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/structure_analysis.png)
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/structure_analysis.png)
 
 ## ETL
  Transform and clean
 
-- [Transform and clean](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/transform_and_clean_data.py)
+- [To transform and clean the data in the csv files use the following script](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/transform_and_clean_data.py)
 
 ## Data Warehouse
 
@@ -37,9 +37,10 @@ Postgres database, an O.R.M storage was implemented with sqlalchemy
 
 - Insert Data:
 
-- [Insert Data](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/insert_data.py)
+- [to insert the data from the csv files into the database use the following script](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/insert_data.py)
 
 ## SQL Queries Development: 
+
 - The portfolio of each client and what percentage each macro-asset and asset represents in the total portfolio as of the latest available date
 [Query 1](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/query_1.py)
 
@@ -99,7 +100,7 @@ result:
 ```
 
 - The portfolio by bank and the percentage of each macro-asset as of the latest available date.
-[Query 2](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/query_2.py)
+[Query 2](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/queries/query_2.py)
 
 result:
 ```
@@ -116,7 +117,7 @@ result:
 ```
 
 -  The portfolio by risk profile and the percentage of ach macro-asset as of the latest available date.
-[Query 3](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/query_3.py)
+[Query 3](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/queries/query_3.py)
 
 result:
 ```
@@ -131,7 +132,7 @@ result:
 ```
 
 - The month-on-month evolution of the average ABA (Assets Under Management) of the total portfolio
-[Query 4](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/query_4.py)
+[Query 4](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/queries/query_4.py)
 
 result:
 ```
@@ -145,8 +146,20 @@ result:
 6            2024                5  1.224560e+08
 ```
 ## Data Visualisation
-[data_visualisation](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/data_visualisation.py)
+[To visualise the data use the following script and enter the browser with the ip given by the server](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/queries/data_visualisation.py)
 
+
+- The portfolio of each client and what percentage each macro-asset and asset represents in the total portfolio as of the latest available date
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/Query1.png)
+
+- The portfolio by bank and the percentage of each macro-asset as of the latest available date.
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/Query2.png)
+
+-  The portfolio by risk profile and the percentage of ach macro-asset as of the latest available date.
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/Query3.png)
+
+- The month-on-month evolution of the average ABA (Assets Under Management) of the total portfolio
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/Query4.png)
 
 ## Technical Conclusions:
 

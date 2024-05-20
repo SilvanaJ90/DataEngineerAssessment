@@ -22,7 +22,11 @@ Investment commercial managers oversee a large number of clients, and the inform
 
 This diagram shows the architecture of our analytical pipeline:
 
-![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/structure_analysis.png)
+![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/
+
+https://github.com/SilvanaJ90/DataEngineerAssessment/assets/105324570/ae1d2b9d-3588-47cb-b1c4-47c18e78b8c3
+
+structure_analysis.png)
 
 ## ETL
  Transform and clean

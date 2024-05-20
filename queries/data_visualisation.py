@@ -37,9 +37,9 @@ df_query_4['date'] = pd.to_datetime(df_query_4['ingestion_year'].astype(str) + d
 
 
 # Create scatter plot for query_1
-fig_query_1 = px.line(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Evolución del Porcentaje de Activos por Cliente')
+#fig_query_1 = px.line(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Evolución del Porcentaje de Activos por Cliente')
 
-#fig_query_1  = px.scatter(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Porcentaje de Activos por Cliente y Tipo de Macroactivo', labels={'id_sistema_cliente': 'ID del Cliente', 'porcentaje_activo': 'Porcentaje de Activos'})
+fig_query_1  = px.scatter(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Porcentaje de Activos por Cliente y Tipo de Macroactivo', labels={'id_sistema_cliente': 'ID del Cliente', 'porcentaje_activo': 'Porcentaje de Activos'})
 
 # Create stacked bar chart for query_2
 fig_query_2 = px.bar(df_query_2, x="banca", y="porcentaje_macroactivo", color="macroactivo", title="Portfolio Composition by Bank and Macro-Asset",

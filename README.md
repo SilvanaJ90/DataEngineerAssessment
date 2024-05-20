@@ -162,6 +162,19 @@ result:
 ![This is an image](https://github.com/SilvanaJ90/DataEngineerAssessment/blob/main/img/Query4.png)
 
 ## Technical Conclusions:
+- Distribution of Asset Percentages:
+  There is a diversity of asset distributions among clients, ranging from significant concentration in one type of asset to a more equitable distribution among various types.
+
+- Bank Behavior and Their Portfolios:
+  There is variability in the composition of bank portfolios, from a concentration in certain types of assets to broader diversification, reflecting different investment strategies.
+
+- Relationship between Risk Profile and Asset Distribution:
+  There is evidence of a relationship between clients' risk profiles and asset allocation, with more conservative profiles concentrated in certain lower-risk assets, while more aggressive profiles show a preference for higher-risk assets.
+
+- Monthly Evolution of Average ABA:
+  There is continuous growth in the average ABA over time, with minor fluctuations, suggesting efficient asset management by the financial institution.
+
+These conclusions provide valuable information for portfolio management decision-making, allowing for adjustments in investment strategies based on clients' needs and risk profiles, as well as identifying trends and growth opportunities in the market.
 
 
 ## Technology Implemented:

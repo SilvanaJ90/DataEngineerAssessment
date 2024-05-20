@@ -33,26 +33,41 @@ df_query_3 = pd.read_sql(query_3, engine)
 df_query_4 = pd.read_sql(query_4, engine)
 
 # Create a date column for better visualisation
-df_query_4['date'] = pd.to_datetime(df_query_4['ingestion_year'].astype(str) + df_query_4['ingestion_month'].astype(str), format='%Y%m')
+df_query_4['date'] = pd.to_datetime(
+    df_query_4['ingestion_year'].astype(str) +
+    df_query_4['ingestion_month'].astype(str), format='%Y%m')
 
-
-# Create scatter plot for query_1
-#fig_query_1 = px.line(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Evolución del Porcentaje de Activos por Cliente')
-
-fig_query_1  = px.scatter(df_query_1, x='id_sistema_cliente', y='porcentaje_activo', color='macroactivo', title='Porcentaje de Activos por Cliente y Tipo de Macroactivo', labels={'id_sistema_cliente': 'ID del Cliente', 'porcentaje_activo': 'Porcentaje de Activos'})
+fig_query_1 = px.scatter(
+    df_query_1, x='id_sistema_cliente',
+    y='porcentaje_activo', color='macroactivo',
+    title='Porcentaje de Activos por Cliente y Tipo de Macroactivo',
+    labels={'id_sistema_cliente': 'ID del Cliente',
+            'porcentaje_activo': 'Porcentaje de Activos'})
 
 # Create stacked bar chart for query_2
-fig_query_2 = px.bar(df_query_2, x="banca", y="porcentaje_macroactivo", color="macroactivo", title="Portfolio Composition by Bank and Macro-Asset",
-                              labels={'banca': 'Bank', 'porcentaje_macroactivo': 'Percentage of Macro-Asset', 'macroactivo': 'Macro-Asset'})
+fig_query_2 = px.bar(
+    df_query_2, x="banca",
+    y="porcentaje_macroactivo",
+    color="macroactivo",
+    title="Portfolio Composition by Bank and Macro-Asset",
+    labels={'banca': 'Bank',
+            'porcentaje_macroactivo': 'Percentage of Macro-Asset',
+            'macroactivo': 'Macro-Asset'})
 
 
 # Create histogram for query_3
-fig_query_3 = px.histogram(df_query_3, x="macroactivo", y="porcentaje_macroactivo", color="perfil_riesgo", title="Distribution of the percentage of each macro-asset by risk profile")
+fig_query_3 = px.histogram(
+    df_query_3, x="macroactivo",
+    y="porcentaje_macroactivo", color="perfil_riesgo",
+    title="Distribution of the percentage of each macro-asset by risk profile")
 
 # Create box plot for query_4
-fig_query_4 = px.box(df_query_4, x='date', y='promedio_aba', title='Box Plot de la evolución mensual del promedio de ABA', labels={'date': 'Fecha', 'promedio_aba': 'Promedio ABA'})
+fig_query_4 = px.box(
+    df_query_4, x='date', y='promedio_aba',
+    title='Box Plot de la evolución mensual del promedio de ABA',
+    labels={'date': 'Fecha', 'promedio_aba': 'Promedio ABA'})
 
-    
+
 # Create the Dash application
 app = dash.Dash(__name__)
 
@@ -73,7 +88,8 @@ app.layout = html.Div([
     ]),
     # Graph for query_3
     html.Div([
-        html.H2("Distribution of the percentage of each macro-asset by risk profile"),
+        html.H2("Distribution of the percentage of each macro-asset \
+                 by risk profile"),
         dcc.Graph(figure=fig_query_3)
     ]),
 
@@ -85,4 +101,4 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051) 
+    app.run_server(debug=True, port=8051)
